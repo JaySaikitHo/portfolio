@@ -24,14 +24,18 @@ const UserHeader = ({ user }) => {
           </h4>
           <p>{user.basics.label}</p>
           <p>Coding in {user.basics.region}</p>
+          {user.basics.yearsOfExperience > 1 &&
           <p>{user.basics.yearsOfExperience} years of experience as a developer</p>
+          }
           <p>{user.basics.headline}</p>
+          {user.basics.blog &&
           <p>
             Blog:{' '}
             <a href={user.basics.blog} target="_blank" rel="noreferrer noopener">
               {user.basics.blog}
             </a>
           </p>
+          }
         </div>
       </Header>
       <div>
